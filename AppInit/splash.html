@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta http-equiv="Refresh" content="2" />
+<title>The application is warming up... Please wait...</title>
+<script language="JavaScript" type="text/javascript">
+    function showtime() {
+        var now = new Date();
+        var day = now.getDate();
+        var month = now.getMonth() + 1;
+        var year = now.getFullYear();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds()
+        var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
+        if (timeValue == "0") timeValue = 12;
+        timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+        timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+        timeValue += (hours >= 12) ? " PM" : " AM";
+        var dateValue = month + "/" + day + "/" + year;
+        setText(foo, dateValue + " " + timeValue);
+        setTimeout("showtime()", 1000);
+    }
+    function setText(control, value) {
+        if (document.all) {
+            control.innerText = value;
+        }
+        else {
+            control.textContent = value;
+        }
+    }
+</script>
+</head>
+
+<body onload="showtime()" bgColor="red">
+<div>
+	<h1>Application Initialization Splash Page</h1>
+	<p>
+    	The application is warming up... Please wait...
+	</p>
+	<div>Current Time: <b><span id="foo"></span></b></div>
+</div>
+</body>
+</html>

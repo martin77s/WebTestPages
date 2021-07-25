@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <applicationInitialization skipManagedModules="true">
+            <add initializationPage="default.aspx" />
+        </applicationInitialization>
+        <rewrite>
+            <rules>
+                <rule name="Redirect during warmup" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{APP_WARMING_UP}" pattern="1" />
+                        <add input="{URL}" pattern="appinit/splash\.html" negate="true" />
+                    </conditions>
+                    <serverVariables>
+                        <set name="SKIP_MANAGED_MODULES" value="1" />
+                    </serverVariables>
+                    <action type="Rewrite" url="splash.html" />
+                </rule>
+            </rules>
+        </rewrite>
+    </system.webServer>
+</configuration>

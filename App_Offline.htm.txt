@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Site Under Maintenance</title>
+	</head>
+ 
+	<body>
+
+		<h1>Under Maintenance</h1>
+		<h2>The application is down for maintenance. Please try again later.</h2>
+
+		<!--        
+			Adding additional hidden content so that IE Friendly Errors don't prevent this message from displaying
+			(note: it will show a "friendly" 404 error if the content is less than 512 bytes).
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			Mauris adipiscing, libero et hendrerit condimentum, ante turpis mollis est, ac eleifend eros purus vel nulla. 
+			Nulla urna velit, convallis nec ornare et, accumsan a eros. Nam nec nisi quis est feugiat consectetur. 
+			Sed metus est, posuere et facilisis eu, consequat sit amet lacus. Praesent quis libero eget mauris pellentesque fermentum. 
+			Suspendisse mattis porta augue nec suscipit. Phasellus iaculis ullamcorper faucibus. 
+			Curabitur molestie vehicula neque, nec ullamcorper erat pretium eu. Integer in urna quam, ac accumsan odio. 
+		-->
+
+	</body>
+</html>
